@@ -1,0 +1,201 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--page-x);
+  height: 64px;
+  backdrop-filter: blur(18px) saturate(180%);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--duration-base) var(--ease-out) background
+    var(--duration-base) var(--ease-out);
+
+  background: rgba(247, 247, 245, 0.85);
+}
+
+.navbar.is-scrolled {
+  border-bottom-color: var(--color-border);
+  background-color: rgba(247, 247, 245, 0.96);
+}
+
+.left-nav_name {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  font-size: 20px;
+  font-family: var(--font-display);
+  font-weight: var(--weight-medium);
+  letter-spacing: -0.3px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1001;
+}
+
+.left-nav_name em {
+  color: var(--color-accent-light);
+  font-style: normal;
+}
+
+.nav_links {
+  display: none;
+  list-style: none;
+  align-items: center;
+  gap: clamp(20px, 3vw, 40px);
+}
+
+.nav_link {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  color: #000;
+}
+
+.nav_link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+ 
+}
+
+.nav_link:hover::before {
+  transform: scaleX(1);
+}
+
+.nav_link {
+  font-size: 14px;
+  font-weight: var(--weight-regular);
+  color: var(--color-text-secondary);
+  letter-spacing: 0.2px;
+  transition: color 0.2s ease;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 0.4rem;
+}
+
+
+.desktop-cta {
+  display: none;
+  text-decoration: none;
+  gap: var(--space-2);
+  align-items: center;
+  background: var(--color-dark);
+  color: var(--color-text-inverse);
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.2px;
+  flex-shrink: 0;
+  font-size: var(--text-sm);
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.desktop-cta:hover {
+  transform: translateY(-1px);
+  background: var(--color-accent);
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 25px;
+}
+
+.nav_mobile {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  background: rgba(247, 247, 245, 0.98);
+  backdrop-filter: blur(24px) saturate(180%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-10);
+  transform: translateY(-12px);
+  transition:
+    opacity var(--duration-slow) var(--ease-out),
+    transform var(--duration-slow) var(--ease-out),
+    visibility 0s linear var(--duration-slow);
+}
+
+.nav_mobile.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition:
+    opacity var(--duration-slow) var(--ease-out),
+    transform var(--duration-slow) var(--ease-out),
+    visibility 0s linear 0s;
+}
+
+.nav-mobile_links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-8);
+}
+
+.nav-mobile_link {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  font-weight: var(--weight-medium);
+  font-size: clamp(32px, 8vw, 48px);
+  font-family: var(--font-display);
+  letter-spacing: -0.5px;
+  transition: color var(--duration-fast) var(--ease-out);
+  position: relative;
+}
+
+.nav-contact-link {
+  text-decoration: none;
+  display: inline-flex;
+  gap: var(--space-2);
+  align-items: center;
+  background: var(--color-dark);
+  color: var(--color-text-inverse);
+  padding: 14px 40px;
+  border-radius: var(--radius-2xl);
+  font-weight: var(--weight-medium);
+  font-size: 15px;
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+@media (min-width: 768px) {
+  .nav_links {
+    display: flex;
+  }
+
+  .desktop-cta {
+    display: inline-flex;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+}
