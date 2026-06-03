@@ -1,6 +1,7 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import "./Featured.css";
+import { Link } from "react-router-dom";
 
 const projectsDetail = [
     {
@@ -46,10 +47,10 @@ const Featured = () => {
                         <span className="featured-label">Selected work</span>
                         <h2 className="project-heading">Featured projects</h2>
                     </div>
-                    <a href="#" className="btn btn_ghost">
+                    <Link href="/projects" className="btn btn_ghost">
                         See all projects
                         <FaArrowRight />
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="projects-grid">

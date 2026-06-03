@@ -12,27 +12,27 @@ const socialAccount = [
     icon: <VscGithubAlt />,
     name: "@alexmercer",
     platform: "GitHub",
-    href: "#"
+    href: "https://github.com/ayush-X-codes"
   },
   {
     icon: <FiLinkedin />,
     name: "Alex Mercer",
     platform: "LinkedIn",
-    href: "#"
+    href: "https://www.linkedin.com/in/ayush-a-a23408356"
   },
   {
     icon: <BsTwitterX />,
     name: "@alex_mercer",
     platform: "X",
-    href: "#"
+    href: "https://x.com/Ayush9364"
   },
   {
     icon: <FaInstagram />,
     name: "@alex.mercer",
     platform: "Instagram",
-    href: "#"
+    href: "https://www.instagram.com/ayush_x_code?igsh=YmZiMTRmb3pwMWx1"
   },
-  { icon: <CiMail />, name: "alex@mercer.io", platform: "Email", href: "#" },
+  { icon: <CiMail />, name: "ashuchauhan5120@gmail.com", platform: "Email", href: "#" },
 ];
 
 const Social = () => {

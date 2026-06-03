@@ -39,7 +39,7 @@ const Navbar = () => {
     <>
       <nav className={`navbar ${hasBorder ? "is-scrolled" : ""}`}>
         <Link to="#" className="left-nav_name">
-          Alex<em>.</em>
+          Ayush<em>.</em>
         </Link>
 
         {/* Desktop Link */}
@@ -62,7 +62,7 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop CTA */}
-        <Link to="#" className="desktop-cta">
+        <Link to="/contact" className="desktop-cta">
           <FiMessageSquare /> Let's talk
         </Link>
 
