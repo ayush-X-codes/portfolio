@@ -21,32 +21,53 @@ const Contact = () => {
                 Let's work <br /> <em>together.</em>
               </h1>
               <p className="contact_para">
-                Whether it's a full project, a design audit, or just an
-                interesting idea - I'd love to hear from you. I typically
-                responed within 24 hours.
+                Whether you have a project in mind, a problem you're trying to
+                solve, or simply want to connect, I'd love to hear from you. My
+                inbox is always open for ideas, collaborations, and interesting
+                conversations.
               </p>
               <div className="info-contact">
                 <div className="info-contact-item">
                   <CiMail />
-                  alex@mercer.io
+                  ashuchauhan5120@gmail.com
                 </div>
                 <div className="info-contact-item">
                   <SlLocationPin />
-                  San Francisco, CA
+                  Dehradun, India
                 </div>
               </div>
 
               <div className="social-contact">
-                <Link to="#" className="social-contact-link">
+                <Link
+                  to="https://github.com/ayush-X-codes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-contact-link"
+                >
                   <VscGithubAlt />
                 </Link>
-                <Link to="#" className="social-contact-link">
+                <Link
+                  to="https://www.linkedin.com/in/ayush-a-a23408356"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-contact-link"
+                >
                   <FiLinkedin />
                 </Link>
-                <Link to="#" className="social-contact-link">
+                <Link
+                  to="https://x.com/Ayush9364"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-contact-link"
+                >
                   <BsTwitterX />
                 </Link>
-                <Link to="#" className="social-contact-link">
+                <Link
+                  to="https://www.instagram.com/ayush_x_code?igsh=YmZiMTRmb3pwMWx1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-contact-link"
+                >
                   <FaInstagram />
                 </Link>
               </div>
@@ -67,7 +88,6 @@ const Contact = () => {
                     />
                   </div>
 
-
                   <div className="field">
                     <label htmlFor="lasttName" className="user_label">
                       Last Name
@@ -79,7 +99,6 @@ const Contact = () => {
                       className="user_input"
                     />
                   </div>
-
                 </div>
 
                 <div className="form-row">

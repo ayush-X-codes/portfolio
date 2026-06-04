@@ -47,7 +47,7 @@ const Featured = () => {
                         <span className="featured-label">Selected work</span>
                         <h2 className="project-heading">Featured projects</h2>
                     </div>
-                    <Link href="/projects" className="btn btn_ghost">
+                    <Link to="/projects" className="btn btn_ghost">
                         See all projects
                         <FaArrowRight />
                     </Link>
@@ -55,7 +55,7 @@ const Featured = () => {
 
                 <div className="projects-grid">
                     {projectsDetail.map((project) => (
-                        <a className="card project-card" key={project.id}>
+                        <Link className="card project-card" key={project.id} to={project.link}>
                             <div className="project-top">
                                 <div className="project-top_inner">{project.image}</div>
                             </div>
@@ -71,7 +71,7 @@ const Featured = () => {
                                     <FaArrowRight />
                                 </span>
                             </div>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>

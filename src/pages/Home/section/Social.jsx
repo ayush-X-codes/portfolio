@@ -6,6 +6,7 @@ import { FiLinkedin } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa6";
 import { CiMail } from "react-icons/ci";
 import "./Social.css";
+import { Link } from "react-router-dom";
 
 const socialAccount = [
   {
@@ -42,7 +43,7 @@ const Social = () => {
         <span className="section_label">Find me online</span>
         <div className="social-grid">
           {socialAccount.map((social) => (
-            <a className="card_social" key={social.platform} href={social.href}>
+            <Link className="card_social" key={social.platform} to={social.href} target="_blank" rel="noopener noreferrer">
               <div className="left-icon">
                 {social.icon}
               </div>
@@ -50,7 +51,7 @@ const Social = () => {
                 <div className="detail_name">{social.name}</div>
                 <div className="detail_platform">{social.platform}</div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

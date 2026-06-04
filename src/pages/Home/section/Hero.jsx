@@ -19,11 +19,11 @@ const Hero = () => {
             ideas into something useful.
           </p>
           <div className="hero_actions">
-            <Link to="#" className="btn-action btn-primary">
+            <Link to="/projects" className="btn-action btn-primary">
               Explore My Work
               <ArrowRight width={14} />
             </Link>
-            <Link to="#" className="btn-action btn-secondary">
+            <Link to="/contact" className="btn-action btn-secondary">
               Get In Touch
             </Link>
           </div>

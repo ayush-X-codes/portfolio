@@ -5,11 +5,12 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const ProjectCategory = [
   { id: 1, categroy: "All" },
-  { id: 2, categroy: "Design" },
-  { id: 3, categroy: "Frontend" },
-  { id: 4, categroy: "Branding" },
-  { id: 5, categroy: "Product" },
+  { id: 2, categroy: "Websites" },
+  { id: 3, categroy: "Applications" },
+  { id: 4, categroy: "Automation" },
+  { id: 5, categroy: "Experiments" },
 ];
+
 
 const allProjects = [
   {
@@ -54,14 +55,16 @@ const Project = () => {
         <div className="project-header">
           <div className="project-header-content">
             <div>
-              <span className="project_tag">My work</span>
+              <span className="project_tag">PROJECTS</span>
               <h1 className="project_h1">
-                Every project, <br /> a new story.
+                Every project taught
+                <br /> me something.
               </h1>
             </div>
             <p className="project_para">
-              A curated selection of design and development projects - from
-              product UI to full identites.
+              A collection of websites, applications, automations, and
+              experiments I've built while exploring new ideas, solving
+              problems, and improving my craft.
             </p>
           </div>
 

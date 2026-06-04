@@ -1,6 +1,7 @@
 import React from "react";
 import "./CTA.css";
 import { FaArrowRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
@@ -11,10 +12,10 @@ const CTA = () => {
             Have an idea? <br /> Let's make it <em>real.</em>
           </h2>
           <p className="cta_para">I'm currently open to new freelance projects and collaborations.</p>
-          <a href="#" className="btn cta-btn">
+          <Link to="/contact" className="btn cta-btn">
             Start a conversation
             <FaArrowRight />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
