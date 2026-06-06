@@ -28,7 +28,9 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className="hero_bottom"></div>
+        <div className="hero_bottom">
+          
+        </div>
       </div>
     </section>
   );

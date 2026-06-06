@@ -1,40 +1,44 @@
-import React from "react";
+
 import { FaArrowRight } from "react-icons/fa6";
 import "./Featured.css";
 import { Link } from "react-router-dom";
+import portfolio from "../../../assets/projects/portfolio.webp"
+import localBusiness from "../../../assets/projects/local-business.webp"
+import automation from "../../../assets/projects/automation.webp"
+import fullStack from "../../../assets/projects/full-stack.webp"
 
 const projectsDetail = [
     {
         id: 1,
-        image: "Æ",
-        tag: { firstTag: "UI/UX", secTag: "Branding" },
-        name: "Aether Design System",
-        desc: " A comprehensive design system built for scale - tokens, components, and documentation for a 40 - person product team",
-        link: "#",
+        image: portfolio,
+        tag: { firstTag: "Personal Website", secTag: "React" },
+        name: "Portfolio Website",
+        desc: "My digital home on the internet. Designed and developed from scratch to showcase my work, projects, and journey as a developer.",
+        link: "https://github.com/ayush-X-codes/portfolio",
     },
     {
         id: 2,
-        image: "Vd",
-        tag: { firstTag: "Web design", secTag: "Frontend" },
-        name: "Verde Studio Website",
-        desc: "Editorial-inspired website for a sustainabale architecture firm. Heavy typography, minimal chrome bold imagery",
-        link: "#",
+        image: localBusiness,
+        tag: { firstTag: "Business Website", secTag: "Frontend" },
+        name: "Local Business Website",
+        desc: "A modern business website focused on building trust, improving online presence, and helping local businesses connect with customers.",
+        link: "https://www.doonbakers.in/",
     },
     {
         id: 3,
-        image: "Fn",
-        tag: { firstTag: "Product", secTag: "Motion" },
-        name: "Fondo Finance App",
-        desc: "Mobile-First personal finance app. Designed onboarding, core flows, and the full component liberary in Figma",
-        link: "#",
+        image: automation,
+        tag: { firstTag: "Web Scraping", secTag: "Automation" },
+        name: "Book Price Tracker",
+        desc: "Tracks book prices from BooksToScrape.com, stores historical data, and alerts when prices decrease. Built to explore web scraping and automation workflows.",
+        link: "https://github.com/ayush-X-codes/product-price-tracker",
     },
     {
         id: 4,
-        image: "Lm",
-        tag: { firstTag: "Branding", secTag: "Art Direction" },
-        name: "Luminae Brand Identity",
-        desc: "Complete visual identity for a luxury candle brand. Logo, color system, packaging, and brand guidlines",
-        link: "#",
+        image: fullStack,
+        tag: { firstTag: "Full Stack", secTag: "Expense Tracker" },
+        name: "Piggy Track",
+        desc: "A full-stack expense tracking application with authentication, APIs, and database integration for managing personal finances.",
+        link: "https://github.com/ayush-X-codes/piggytrack",
     },
 ];
 
@@ -55,9 +59,9 @@ const Featured = () => {
 
                 <div className="projects-grid">
                     {projectsDetail.map((project) => (
-                        <Link className="card project-card" key={project.id} to={project.link}>
+                        <Link className="card project-card" key={project.id} to={project.link} target="_blank" rel="noopener noreferrer">
                             <div className="project-top">
-                                <div className="project-top_inner">{project.image}</div>
+                                <div className="project-top_inner"><img src={project.image} alt={project.name} loading="lazy"/></div>
                             </div>
                             <div className="project-bottom">
                                 <div className="tag_project">

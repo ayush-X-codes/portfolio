@@ -1,5 +1,4 @@
-import React from "react";
-import { Mail } from "lucide-react";
+
 import { VscGithubAlt } from "react-icons/vsc";
 import { BsTwitterX } from "react-icons/bs";
 import { FiLinkedin } from "react-icons/fi";

@@ -133,6 +133,19 @@
     position: relative;
 }
 
+.project-top_inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.project-top_inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .project-card:hover .project-top_inner {
     transform: scale(1.06);
 }
