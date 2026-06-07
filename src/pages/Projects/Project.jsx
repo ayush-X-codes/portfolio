@@ -1,48 +1,91 @@
 import "./Project.css";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
+import portfolio from "../../assets/projects/portfolio.webp"
+import localBusiness from "../../assets/projects/local-business.webp"
+import automation from "../../assets/projects/automation.webp"
+import fullStack from "../../assets/projects/full-stack.webp"
 
 const ProjectCategory = [
   { id: 1, categroy: "All" },
   { id: 2, categroy: "Websites" },
   { id: 3, categroy: "Applications" },
   { id: 4, categroy: "Automation" },
-  { id: 5, categroy: "Experiments" },
+  { id: 5, categroy: "Systems Programming" },
 ];
-
 
 const allProjects = [
   {
     id: 1,
-    image: "Æ",
-    tag: { firstTag: "UI/UX", secTag: "Branding" },
-    name: "Aether Design System",
-    desc: " A comprehensive design system built for scale - tokens, components, and documentation for a 40 - person product team",
+    image: portfolio,
+    tag: { firstTag: "Personal", secTag: "React" },
+    name: "Portfolio Website",
+    desc: "My digital home on the internet, built to showcase projects, share my journey, and document what I'm learning as a developer.",
     link: "#",
   },
 
   {
     id: 2,
-    image: "Vd",
-    tag: { firstTag: "Web design", secTag: "Frontend" },
-    name: "Verde Studio Website",
-    desc: "Editorial-inspired website for a sustainabale architecture firm. Heavy typography, minimal chrome bold imagery",
+    image: localBusiness,
+    tag: { firstTag: "Client Work", secTag: "Website" },
+    name: "Doon Bakers",
+    desc: "A modern business website designed to strengthen online presence and help customers discover services more easily.",
     link: "#",
   },
   {
     id: 3,
-    image: "Fn",
-    tag: { firstTag: "Product", secTag: "Motion" },
-    name: "Fondo Finance App",
-    desc: "Mobile-First personal finance app. Designed onboarding, core flows, and the full component liberary in Figma",
+    image: fullStack,
+    tag: { firstTag: "Full Stack", secTag: "API" },
+    name: "Piggy Track",
+    desc: "An expense tracking application with authentication, APIs, and database integration for managing personal finances.",
     link: "#",
   },
   {
     id: 4,
+    image: automation,
+    tag: { firstTag: "Automation", secTag: "Scraping" },
+    name: "Book Price Tracker",
+    desc: "Tracks book prices automatically, stores historical data, and detects price drops through a custom scraping workflow.",
+    link: "#",
+  },
+  {
+    id: 5,
     image: "Lm",
-    tag: { firstTag: "Branding", secTag: "Art Direction" },
-    name: "Luminae Brand Identity",
-    desc: "Complete visual identity for a luxury candle brand. Logo, color system, packaging, and brand guidlines",
+    tag: { firstTag: "Scraping", secTag: "CSV" },
+    name: "Review Scraper",
+    desc: "Scrapes product data across multiple pages, extracts detailed information, and exports structured results to CSV files.",
+    link: "#",
+  },
+  {
+    id: 6,
+    image: "Lm",
+    tag: { firstTag: "Node.js", secTag: "TCP" },
+    name: "TinyServer",
+    desc: "Built a custom HTTP server using TCP sockets with routing, request parsing, response handling, and HTML file serving.",
+    link: "#",
+  },
+  {
+    id: 7,
+    image: "Lm",
+    tag: { firstTag: "Framework", secTag: "Node.js" },
+    name: "MiniExpress",
+    desc: "A lightweight Express-inspired framework featuring routing, middleware support, and helper methods for handling requests and responses.",
+    link: "#",
+  },
+  {
+    id: 8,
+    image: "Lm",
+    tag: { firstTag: "Database", secTag: "Systems" },
+    name: "SimpleDB",
+    desc: "A lightweight database engine supporting get, set, delete operations, indexing, and basic query execution.",
+    link: "#",
+  },
+  {
+    id: 9,
+    image: "Lm",
+    tag: { firstTag: "Node.js Internals", secTag: "Events" },
+    name: "EventFlow",
+    desc: "A custom implementation of Node.js EventEmitter with support for event registration, emission, and listener removal.",
     link: "#",
   },
 ];
@@ -79,9 +122,9 @@ const Project = () => {
         <div className="project-grid">
           <div className="project-grid--full">
             {allProjects.map((project) => (
-              <Link key={project.id} className="card-project card">
+              <Link key={project.id} className="card-project card" to={project.link} target="_blank" rel="noopener noreferrer">
                 <div className="card-header">
-                  <div>{project.image}</div>
+                  <div className="card-header-inner"><img src={project.image} alt={project.name} loading="lazy"/></div>
                 </div>
                 <div className="card-body">
                   <div className="card-tags">
