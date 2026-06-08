@@ -1,10 +1,15 @@
 import "./Project.css";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
-import portfolio from "../../assets/projects/portfolio.webp"
-import localBusiness from "../../assets/projects/local-business.webp"
-import automation from "../../assets/projects/automation.webp"
-import fullStack from "../../assets/projects/full-stack.webp"
+import portfolio from "../../assets/projects/portfolio.webp";
+import localBusiness from "../../assets/projects/local-business.webp";
+import automation from "../../assets/projects/automation.webp";
+import fullStack from "../../assets/projects/full-stack.webp";
+import reviewScraper from "../../assets/projects/review-scraper.webp";
+import tinyServer from "../../assets/projects/tiny-server.webp";
+import miniExpress from "../../assets/projects/mini-express.webp";
+import simpleDB from "../../assets/projects/simple-db.webp";
+import eventFlow from "../../assets/projects/event-flow.webp";
 
 const ProjectCategory = [
   { id: 1, categroy: "All" },
@@ -21,7 +26,7 @@ const allProjects = [
     tag: { firstTag: "Personal", secTag: "React" },
     name: "Portfolio Website",
     desc: "My digital home on the internet, built to showcase projects, share my journey, and document what I'm learning as a developer.",
-    link: "#",
+    link: "https://ayush-gray.vercel.app/",
   },
 
   {
@@ -30,7 +35,7 @@ const allProjects = [
     tag: { firstTag: "Client Work", secTag: "Website" },
     name: "Doon Bakers",
     desc: "A modern business website designed to strengthen online presence and help customers discover services more easily.",
-    link: "#",
+    link: "https://www.doonbakers.in/",
   },
   {
     id: 3,
@@ -38,7 +43,7 @@ const allProjects = [
     tag: { firstTag: "Full Stack", secTag: "API" },
     name: "Piggy Track",
     desc: "An expense tracking application with authentication, APIs, and database integration for managing personal finances.",
-    link: "#",
+    link: "https://github.com/ayush-X-codes/piggytrack",
   },
   {
     id: 4,
@@ -46,47 +51,47 @@ const allProjects = [
     tag: { firstTag: "Automation", secTag: "Scraping" },
     name: "Book Price Tracker",
     desc: "Tracks book prices automatically, stores historical data, and detects price drops through a custom scraping workflow.",
-    link: "#",
+    link: "https://github.com/ayush-X-codes/product-price-tracker",
   },
   {
     id: 5,
-    image: "Lm",
+    image: reviewScraper,
     tag: { firstTag: "Scraping", secTag: "CSV" },
     name: "Review Scraper",
     desc: "Scrapes product data across multiple pages, extracts detailed information, and exports structured results to CSV files.",
-    link: "#",
+    link: "https://github.com/ayush-X-codes/review-scraper",
   },
   {
     id: 6,
-    image: "Lm",
+    image: tinyServer,
     tag: { firstTag: "Node.js", secTag: "TCP" },
     name: "TinyServer",
     desc: "Built a custom HTTP server using TCP sockets with routing, request parsing, response handling, and HTML file serving.",
-    link: "#",
+    link: "https://github.com/ayush-X-codes/HTTP-Server",
   },
   {
     id: 7,
-    image: "Lm",
+    image: miniExpress,
     tag: { firstTag: "Framework", secTag: "Node.js" },
     name: "MiniExpress",
     desc: "A lightweight Express-inspired framework featuring routing, middleware support, and helper methods for handling requests and responses.",
-    link: "#",
+    link: "https://github.com/ayush-X-codes/Mini-version-of-tools",
   },
   {
     id: 8,
-    image: "Lm",
+    image: simpleDB,
     tag: { firstTag: "Database", secTag: "Systems" },
     name: "SimpleDB",
     desc: "A lightweight database engine supporting get, set, delete operations, indexing, and basic query execution.",
-    link: "#",
+    link: "https://github.com/ayush-X-codes/database",
   },
   {
     id: 9,
-    image: "Lm",
+    image: eventFlow,
     tag: { firstTag: "Node.js Internals", secTag: "Events" },
     name: "EventFlow",
     desc: "A custom implementation of Node.js EventEmitter with support for event registration, emission, and listener removal.",
-    link: "#",
+    link: "https://github.com/ayush-X-codes/Promise-EventEmitter",
   },
 ];
 
@@ -122,9 +127,21 @@ const Project = () => {
         <div className="project-grid">
           <div className="project-grid--full">
             {allProjects.map((project) => (
-              <Link key={project.id} className="card-project card" to={project.link} target="_blank" rel="noopener noreferrer">
+              <Link
+                key={project.id}
+                className="card-project card"
+                to={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="card-header">
-                  <div className="card-header-inner"><img src={project.image} alt={project.name} loading="lazy"/></div>
+                  <div className="card-header-inner">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
                 <div className="card-body">
                   <div className="card-tags">
