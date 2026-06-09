@@ -10,6 +10,8 @@ import tinyServer from "../../assets/projects/tiny-server.webp";
 import miniExpress from "../../assets/projects/mini-express.webp";
 import simpleDB from "../../assets/projects/simple-db.webp";
 import eventFlow from "../../assets/projects/event-flow.webp";
+import { supabase } from "../../lib/supabase";
+
 
 const ProjectCategory = [
   { id: 1, categroy: "All" },
@@ -96,6 +98,8 @@ const allProjects = [
 ];
 
 const Project = () => {
+
+  console.log(supabase);
   return (
     <main className="projects" id="projects">
       <div className="wrapper-projects">
