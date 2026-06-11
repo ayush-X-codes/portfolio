@@ -10,25 +10,25 @@ import { Link } from "react-router-dom";
 const socialAccount = [
   {
     icon: <VscGithubAlt />,
-    name: "@alexmercer",
+    name: "ayush-X-codes",
     platform: "GitHub",
     href: "https://github.com/ayush-X-codes"
   },
   {
     icon: <FiLinkedin />,
-    name: "Alex Mercer",
+    name: "Ayush",
     platform: "LinkedIn",
     href: "https://www.linkedin.com/in/ayush-a-a23408356"
   },
   {
     icon: <BsTwitterX />,
-    name: "@alex_mercer",
+    name: "@Ayush9364",
     platform: "X",
     href: "https://x.com/Ayush9364"
   },
   {
     icon: <FaInstagram />,
-    name: "@alex.mercer",
+    name: "ayush_x_code",
     platform: "Instagram",
     href: "https://www.instagram.com/ayush_x_code?igsh=YmZiMTRmb3pwMWx1"
   },
