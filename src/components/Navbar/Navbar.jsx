@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
@@ -10,6 +9,18 @@ import "./Navbar.css";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hasBorder, setHasBorder] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,18 +38,22 @@ const Navbar = () => {
     };
   }, []);
 
+  const handleOverlayClick = () => {
+    setIsOpen(false);
+  };
+
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
   };
 
   const closeMenu = () => {
-    setIsOpen((prev) => !prev);
+    setIsOpen(false);
   };
 
   return (
     <>
       <nav className={`navbar ${hasBorder ? "is-scrolled" : ""}`}>
-        <Link to="#" className="left-nav_name">
+        <Link to="/" className="left-nav_name">
           Ayush<em>.</em>
         </Link>
 
@@ -73,26 +88,33 @@ const Navbar = () => {
       </nav>
 
       {/*  Mobile overlay menu */}
-      <div className={`nav_mobile ${isOpen ? "active" : ""}`}>
+      <div
+        className={`nav_mobile ${isOpen ? "active" : ""}`}
+        onClick={handleOverlayClick}
+      >
         <ul className="nav-mobile_links">
           <li>
-            <Link to="/" className="nav-mobile_link">
+            <Link to="/" className="nav-mobile_link" onClick={closeMenu}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/projects" className="nav-mobile_link">
+            <Link
+              to="/projects"
+              className="nav-mobile_link"
+              onClick={closeMenu}
+            >
               Projects
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="nav-mobile_link">
+            <Link to="/contact" className="nav-mobile_link" onClick={closeMenu}>
               Contact
             </Link>
           </li>
         </ul>
 
-        <Link to="/contact" className="nav-contact-link">
+        <Link to="/contact" className="nav-contact-link" onClick={closeMenu}>
           <FiMessageSquare /> Let's talk
         </Link>
       </div>
